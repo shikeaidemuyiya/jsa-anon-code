@@ -1,0 +1,54 @@
+{
+  "teacher": {
+    "acc": 0.9136,
+    "params": 11169162,
+    "flops": 1110845440
+  },
+  "protocol": {
+    "svd": "AdamW 1e-4 x3 CE -> KD(AdamW 5e-5, T=2, a=0.5) x3 -> FCQ",
+    "depgraph": "SGD 0.02 cosine x12 -> KD(SGD 2e-3, T=2, a=0.5) x3"
+  },
+  "students": {
+    "svd_tau0.7": {
+      "acc": 0.8945,
+      "params": 4393378,
+      "flops": 532432896,
+      "acc_before_ft": 0.3867,
+      "acc_ce": 0.8765,
+      "acc_kd": 0.8945,
+      "acc_kd_fcq": 0.8945
+    },
+    "svd_tau0.8": {
+      "acc": 0.9026,
+      "params": 6248883,
+      "flops": 703197184,
+      "acc_before_ft": 0.5407,
+      "acc_ce": 0.8822,
+      "acc_kd": 0.9026,
+      "acc_kd_fcq": 0.9028
+    },
+    "svd_tau0.9": {
+      "acc": 0.912,
+      "params": 8710522,
+      "flops": 920733696,
+      "acc_before_ft": 0.7934,
+      "acc_ce": 0.8947,
+      "acc_kd": 0.912,
+      "acc_kd_fcq": 0.912
+    },
+    "depgraph_r0.3": {
+      "acc": 0.9098,
+      "params": 5262000,
+      "flops": 617480640,
+      "acc_sgd": 0.9083,
+      "acc_kd": 0.9098
+    },
+    "depgraph_r0.5": {
+      "acc": 0.8995,
+      "params": 2786795,
+      "flops": 274652748,
+      "acc_sgd": 0.8976,
+      "acc_kd": 0.8995
+    }
+  }
+}

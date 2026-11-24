@@ -1,0 +1,549 @@
+{
+  "dma_staging": {
+    "pointwise_k4": {
+      "block_bytes": 16,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 1,
+        "total_lines": 256,
+        "overfetch_bytes": 12288,
+        "staging_buffer_bytes": 16384,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 256,
+        "straddling_channels": 0,
+        "overfetch_bytes": 12288,
+        "staging_buffer_bytes": 4096,
+        "fixed_stride": false
+      }
+    },
+    "pointwise_k7": {
+      "block_bytes": 28,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 1,
+        "total_lines": 256,
+        "overfetch_bytes": 9216,
+        "staging_buffer_bytes": 16384,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 352,
+        "straddling_channels": 96,
+        "overfetch_bytes": 15360,
+        "staging_buffer_bytes": 7168,
+        "fixed_stride": false
+      }
+    },
+    "pointwise_k13": {
+      "block_bytes": 52,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 1,
+        "total_lines": 256,
+        "overfetch_bytes": 3072,
+        "staging_buffer_bytes": 16384,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 448,
+        "straddling_channels": 192,
+        "overfetch_bytes": 15360,
+        "staging_buffer_bytes": 13312,
+        "fixed_stride": false
+      }
+    },
+    "pointwise_k16": {
+      "block_bytes": 64,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 1,
+        "total_lines": 256,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 16384,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 256,
+        "straddling_channels": 0,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 16384,
+        "fixed_stride": false
+      }
+    },
+    "spatial_Ci256_k4": {
+      "block_bytes": 9216,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 144,
+        "total_lines": 36864,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 2359296,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 36864,
+        "straddling_channels": 256,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 2359296,
+        "fixed_stride": false
+      }
+    },
+    "spatial_Ci256_k16": {
+      "block_bytes": 9216,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 144,
+        "total_lines": 36864,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 2359296,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 36864,
+        "straddling_channels": 256,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 2359296,
+        "fixed_stride": false
+      }
+    },
+    "spatial_Ci64_k16": {
+      "block_bytes": 2304,
+      "channels": 256,
+      "aligned": {
+        "lines_per_channel": 36,
+        "total_lines": 9216,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 589824,
+        "fixed_stride": true,
+        "block_straddles_line": false
+      },
+      "packed": {
+        "total_lines": 9216,
+        "straddling_channels": 256,
+        "overfetch_bytes": 0,
+        "staging_buffer_bytes": 589824,
+        "fixed_stride": false
+      }
+    }
+  },
+  "relative_rank": {
+    "tau0.7": {
+      "n_layers": 17,
+      "k_min": 8,
+      "k_max": 182,
+      "rel_min": 0.26,
+      "rel_max": 0.516,
+      "rel_mean": 0.408,
+      "rel_median": 0.406,
+      "detail": [
+        {
+          "k": 8,
+          "co": 64,
+          "ci": 3,
+          "upper": 27,
+          "rel": 0.2962962962962963
+        },
+        {
+          "k": 31,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.484375
+        },
+        {
+          "k": 33,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.515625
+        },
+        {
+          "k": 33,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.515625
+        },
+        {
+          "k": 32,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.5
+        },
+        {
+          "k": 54,
+          "co": 128,
+          "ci": 64,
+          "upper": 128,
+          "rel": 0.421875
+        },
+        {
+          "k": 61,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.4765625
+        },
+        {
+          "k": 61,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.4765625
+        },
+        {
+          "k": 60,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.46875
+        },
+        {
+          "k": 88,
+          "co": 256,
+          "ci": 128,
+          "upper": 256,
+          "rel": 0.34375
+        },
+        {
+          "k": 104,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.40625
+        },
+        {
+          "k": 103,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.40234375
+        },
+        {
+          "k": 99,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.38671875
+        },
+        {
+          "k": 133,
+          "co": 512,
+          "ci": 256,
+          "upper": 512,
+          "rel": 0.259765625
+        },
+        {
+          "k": 162,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.31640625
+        },
+        {
+          "k": 159,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.310546875
+        },
+        {
+          "k": 182,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.35546875
+        }
+      ]
+    },
+    "tau0.8": {
+      "n_layers": 17,
+      "k_min": 11,
+      "k_max": 262,
+      "rel_min": 0.402,
+      "rel_max": 0.641,
+      "rel_mean": 0.545,
+      "rel_median": 0.547,
+      "detail": [
+        {
+          "k": 11,
+          "co": 64,
+          "ci": 3,
+          "upper": 27,
+          "rel": 0.4074074074074074
+        },
+        {
+          "k": 39,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.609375
+        },
+        {
+          "k": 41,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.640625
+        },
+        {
+          "k": 41,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.640625
+        },
+        {
+          "k": 41,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.640625
+        },
+        {
+          "k": 70,
+          "co": 128,
+          "ci": 64,
+          "upper": 128,
+          "rel": 0.546875
+        },
+        {
+          "k": 78,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.609375
+        },
+        {
+          "k": 78,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.609375
+        },
+        {
+          "k": 77,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.6015625
+        },
+        {
+          "k": 123,
+          "co": 256,
+          "ci": 128,
+          "upper": 256,
+          "rel": 0.48046875
+        },
+        {
+          "k": 140,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.546875
+        },
+        {
+          "k": 139,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.54296875
+        },
+        {
+          "k": 136,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.53125
+        },
+        {
+          "k": 206,
+          "co": 512,
+          "ci": 256,
+          "upper": 512,
+          "rel": 0.40234375
+        },
+        {
+          "k": 242,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.47265625
+        },
+        {
+          "k": 238,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.46484375
+        },
+        {
+          "k": 262,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.51171875
+        }
+      ]
+    },
+    "tau0.9": {
+      "n_layers": 17,
+      "k_min": 16,
+      "k_max": 364,
+      "rel_min": 0.593,
+      "rel_max": 0.797,
+      "rel_mean": 0.722,
+      "rel_median": 0.727,
+      "detail": [
+        {
+          "k": 16,
+          "co": 64,
+          "ci": 3,
+          "upper": 27,
+          "rel": 0.5925925925925926
+        },
+        {
+          "k": 49,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.765625
+        },
+        {
+          "k": 50,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.78125
+        },
+        {
+          "k": 51,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.796875
+        },
+        {
+          "k": 51,
+          "co": 64,
+          "ci": 64,
+          "upper": 64,
+          "rel": 0.796875
+        },
+        {
+          "k": 92,
+          "co": 128,
+          "ci": 64,
+          "upper": 128,
+          "rel": 0.71875
+        },
+        {
+          "k": 99,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.7734375
+        },
+        {
+          "k": 99,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.7734375
+        },
+        {
+          "k": 98,
+          "co": 128,
+          "ci": 128,
+          "upper": 128,
+          "rel": 0.765625
+        },
+        {
+          "k": 171,
+          "co": 256,
+          "ci": 128,
+          "upper": 256,
+          "rel": 0.66796875
+        },
+        {
+          "k": 187,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.73046875
+        },
+        {
+          "k": 186,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.7265625
+        },
+        {
+          "k": 184,
+          "co": 256,
+          "ci": 256,
+          "upper": 256,
+          "rel": 0.71875
+        },
+        {
+          "k": 313,
+          "co": 512,
+          "ci": 256,
+          "upper": 512,
+          "rel": 0.611328125
+        },
+        {
+          "k": 348,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.6796875
+        },
+        {
+          "k": 344,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.671875
+        },
+        {
+          "k": 364,
+          "co": 512,
+          "ci": 512,
+          "upper": 512,
+          "rel": 0.7109375
+        }
+      ]
+    }
+  },
+  "rank_cap": {
+    "tau0.7": {
+      "n_layers": 17,
+      "n_layers_over_cap": 0,
+      "over_cap_layers": [],
+      "baseline_floors_rel": 0.408
+    },
+    "tau0.8": {
+      "n_layers": 17,
+      "n_layers_over_cap": 0,
+      "over_cap_layers": [],
+      "baseline_floors_rel": 0.545
+    },
+    "tau0.9": {
+      "n_layers": 17,
+      "n_layers_over_cap": 0,
+      "over_cap_layers": [],
+      "baseline_floors_rel": 0.722
+    }
+  }
+}

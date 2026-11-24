@@ -1,0 +1,741 @@
+{
+ "env": {
+  "python": "3.12.10",
+  "torch": "2.14.1+cu126",
+  "torchvision": "0.29.1+cu126",
+  "numpy": "2.5.4",
+  "os": "Windows 11",
+  "cpu": "Intel Core i9-12900 (16 cores: 8P+8E), 64 GB RAM",
+  "threads": "torch.set_num_threads(1) for all latency runs",
+  "seed": 42,
+  "augmentation": "RandomCrop(32, padding=4) + RandomHorizontalFlip + Normalize (CIFAR-10)"
+ },
+ "layer_256x256x9": {
+  "baseline_unaligned": {
+   "traffic_bytes": 2359296,
+   "touched_lines": 36864,
+   "raw_bytes": 2359296,
+   "straddle_waste_bytes": 0
+  },
+  "baseline_aligned": {
+   "traffic_bytes": 2359296,
+   "touched_lines": 36864,
+   "raw_bytes": 2359296,
+   "straddle_waste_bytes": 0
+  },
+  "k16_unaligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_aligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_summary": {
+   "raw_bytes": 163840,
+   "aligned_traffic": 163840,
+   "unaligned_traffic": 163840,
+   "baseline_traffic": 2359296,
+   "red_base_vs_aligned": 14.4,
+   "red_base_vs_unaligned": 14.4,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k32_unaligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_aligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_summary": {
+   "raw_bytes": 327680,
+   "aligned_traffic": 327680,
+   "unaligned_traffic": 327680,
+   "baseline_traffic": 2359296,
+   "red_base_vs_aligned": 7.2,
+   "red_base_vs_unaligned": 7.2,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k64_unaligned": [
+   {
+    "traffic_bytes": 589824,
+    "touched_lines": 9216,
+    "raw_bytes": 589824,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 65536,
+    "touched_lines": 1024,
+    "raw_bytes": 65536,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_aligned": [
+   {
+    "traffic_bytes": 589824,
+    "touched_lines": 9216,
+    "raw_bytes": 589824,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 65536,
+    "touched_lines": 1024,
+    "raw_bytes": 65536,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_summary": {
+   "raw_bytes": 655360,
+   "aligned_traffic": 655360,
+   "unaligned_traffic": 655360,
+   "baseline_traffic": 2359296,
+   "red_base_vs_aligned": 3.6,
+   "red_base_vs_unaligned": 3.6,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k96_unaligned": [
+   {
+    "traffic_bytes": 884736,
+    "touched_lines": 13824,
+    "raw_bytes": 884736,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 98304,
+    "touched_lines": 1536,
+    "raw_bytes": 98304,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_aligned": [
+   {
+    "traffic_bytes": 884736,
+    "touched_lines": 13824,
+    "raw_bytes": 884736,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 98304,
+    "touched_lines": 1536,
+    "raw_bytes": 98304,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_summary": {
+   "raw_bytes": 983040,
+   "aligned_traffic": 983040,
+   "unaligned_traffic": 983040,
+   "baseline_traffic": 2359296,
+   "red_base_vs_aligned": 2.4,
+   "red_base_vs_unaligned": 2.4,
+   "align_overhead_vs_unaligned": 1.0
+  }
+ },
+ "layer_512x512x9": {
+  "baseline_unaligned": {
+   "traffic_bytes": 9437184,
+   "touched_lines": 147456,
+   "raw_bytes": 9437184,
+   "straddle_waste_bytes": 0
+  },
+  "baseline_aligned": {
+   "traffic_bytes": 9437184,
+   "touched_lines": 147456,
+   "raw_bytes": 9437184,
+   "straddle_waste_bytes": 0
+  },
+  "k16_unaligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_aligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_summary": {
+   "raw_bytes": 327680,
+   "aligned_traffic": 327680,
+   "unaligned_traffic": 327680,
+   "baseline_traffic": 9437184,
+   "red_base_vs_aligned": 28.8,
+   "red_base_vs_unaligned": 28.8,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k32_unaligned": [
+   {
+    "traffic_bytes": 589824,
+    "touched_lines": 9216,
+    "raw_bytes": 589824,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 65536,
+    "touched_lines": 1024,
+    "raw_bytes": 65536,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_aligned": [
+   {
+    "traffic_bytes": 589824,
+    "touched_lines": 9216,
+    "raw_bytes": 589824,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 65536,
+    "touched_lines": 1024,
+    "raw_bytes": 65536,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_summary": {
+   "raw_bytes": 655360,
+   "aligned_traffic": 655360,
+   "unaligned_traffic": 655360,
+   "baseline_traffic": 9437184,
+   "red_base_vs_aligned": 14.4,
+   "red_base_vs_unaligned": 14.4,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k64_unaligned": [
+   {
+    "traffic_bytes": 1179648,
+    "touched_lines": 18432,
+    "raw_bytes": 1179648,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 131072,
+    "touched_lines": 2048,
+    "raw_bytes": 131072,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_aligned": [
+   {
+    "traffic_bytes": 1179648,
+    "touched_lines": 18432,
+    "raw_bytes": 1179648,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 131072,
+    "touched_lines": 2048,
+    "raw_bytes": 131072,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_summary": {
+   "raw_bytes": 1310720,
+   "aligned_traffic": 1310720,
+   "unaligned_traffic": 1310720,
+   "baseline_traffic": 9437184,
+   "red_base_vs_aligned": 7.2,
+   "red_base_vs_unaligned": 7.2,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k96_unaligned": [
+   {
+    "traffic_bytes": 1769472,
+    "touched_lines": 27648,
+    "raw_bytes": 1769472,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 196608,
+    "touched_lines": 3072,
+    "raw_bytes": 196608,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_aligned": [
+   {
+    "traffic_bytes": 1769472,
+    "touched_lines": 27648,
+    "raw_bytes": 1769472,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 196608,
+    "touched_lines": 3072,
+    "raw_bytes": 196608,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_summary": {
+   "raw_bytes": 1966080,
+   "aligned_traffic": 1966080,
+   "unaligned_traffic": 1966080,
+   "baseline_traffic": 9437184,
+   "red_base_vs_aligned": 4.8,
+   "red_base_vs_unaligned": 4.8,
+   "align_overhead_vs_unaligned": 1.0
+  }
+ },
+ "layer_128x128x9": {
+  "baseline_unaligned": {
+   "traffic_bytes": 589824,
+   "touched_lines": 9216,
+   "raw_bytes": 589824,
+   "straddle_waste_bytes": 0
+  },
+  "baseline_aligned": {
+   "traffic_bytes": 589824,
+   "touched_lines": 9216,
+   "raw_bytes": 589824,
+   "straddle_waste_bytes": 0
+  },
+  "k16_unaligned": [
+   {
+    "traffic_bytes": 73728,
+    "touched_lines": 1152,
+    "raw_bytes": 73728,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 8192,
+    "touched_lines": 128,
+    "raw_bytes": 8192,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_aligned": [
+   {
+    "traffic_bytes": 73728,
+    "touched_lines": 1152,
+    "raw_bytes": 73728,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 8192,
+    "touched_lines": 128,
+    "raw_bytes": 8192,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_summary": {
+   "raw_bytes": 81920,
+   "aligned_traffic": 81920,
+   "unaligned_traffic": 81920,
+   "baseline_traffic": 589824,
+   "red_base_vs_aligned": 7.2,
+   "red_base_vs_unaligned": 7.2,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k32_unaligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_aligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_summary": {
+   "raw_bytes": 163840,
+   "aligned_traffic": 163840,
+   "unaligned_traffic": 163840,
+   "baseline_traffic": 589824,
+   "red_base_vs_aligned": 3.6,
+   "red_base_vs_unaligned": 3.6,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k64_unaligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_aligned": [
+   {
+    "traffic_bytes": 294912,
+    "touched_lines": 4608,
+    "raw_bytes": 294912,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 32768,
+    "touched_lines": 512,
+    "raw_bytes": 32768,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_summary": {
+   "raw_bytes": 327680,
+   "aligned_traffic": 327680,
+   "unaligned_traffic": 327680,
+   "baseline_traffic": 589824,
+   "red_base_vs_aligned": 1.8,
+   "red_base_vs_unaligned": 1.8,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k96_unaligned": [
+   {
+    "traffic_bytes": 442368,
+    "touched_lines": 6912,
+    "raw_bytes": 442368,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 49152,
+    "touched_lines": 768,
+    "raw_bytes": 49152,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_aligned": [
+   {
+    "traffic_bytes": 442368,
+    "touched_lines": 6912,
+    "raw_bytes": 442368,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 49152,
+    "touched_lines": 768,
+    "raw_bytes": 49152,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_summary": {
+   "raw_bytes": 491520,
+   "aligned_traffic": 491520,
+   "unaligned_traffic": 491520,
+   "baseline_traffic": 589824,
+   "red_base_vs_aligned": 1.2,
+   "red_base_vs_unaligned": 1.2,
+   "align_overhead_vs_unaligned": 1.0
+  }
+ },
+ "layer_64x64x9": {
+  "baseline_unaligned": {
+   "traffic_bytes": 147456,
+   "touched_lines": 2304,
+   "raw_bytes": 147456,
+   "straddle_waste_bytes": 0
+  },
+  "baseline_aligned": {
+   "traffic_bytes": 147456,
+   "touched_lines": 2304,
+   "raw_bytes": 147456,
+   "straddle_waste_bytes": 0
+  },
+  "k16_unaligned": [
+   {
+    "traffic_bytes": 36864,
+    "touched_lines": 576,
+    "raw_bytes": 36864,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 4096,
+    "touched_lines": 64,
+    "raw_bytes": 4096,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_aligned": [
+   {
+    "traffic_bytes": 36864,
+    "touched_lines": 576,
+    "raw_bytes": 36864,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 4096,
+    "touched_lines": 64,
+    "raw_bytes": 4096,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k16_summary": {
+   "raw_bytes": 40960,
+   "aligned_traffic": 40960,
+   "unaligned_traffic": 40960,
+   "baseline_traffic": 147456,
+   "red_base_vs_aligned": 3.6,
+   "red_base_vs_unaligned": 3.6,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k32_unaligned": [
+   {
+    "traffic_bytes": 73728,
+    "touched_lines": 1152,
+    "raw_bytes": 73728,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 8192,
+    "touched_lines": 128,
+    "raw_bytes": 8192,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_aligned": [
+   {
+    "traffic_bytes": 73728,
+    "touched_lines": 1152,
+    "raw_bytes": 73728,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 8192,
+    "touched_lines": 128,
+    "raw_bytes": 8192,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k32_summary": {
+   "raw_bytes": 81920,
+   "aligned_traffic": 81920,
+   "unaligned_traffic": 81920,
+   "baseline_traffic": 147456,
+   "red_base_vs_aligned": 1.8,
+   "red_base_vs_unaligned": 1.8,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k64_unaligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_aligned": [
+   {
+    "traffic_bytes": 147456,
+    "touched_lines": 2304,
+    "raw_bytes": 147456,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 16384,
+    "touched_lines": 256,
+    "raw_bytes": 16384,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k64_summary": {
+   "raw_bytes": 163840,
+   "aligned_traffic": 163840,
+   "unaligned_traffic": 163840,
+   "baseline_traffic": 147456,
+   "red_base_vs_aligned": 0.9,
+   "red_base_vs_unaligned": 0.9,
+   "align_overhead_vs_unaligned": 1.0
+  },
+  "k96_unaligned": [
+   {
+    "traffic_bytes": 221184,
+    "touched_lines": 3456,
+    "raw_bytes": 221184,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 24576,
+    "touched_lines": 384,
+    "raw_bytes": 24576,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_aligned": [
+   {
+    "traffic_bytes": 221184,
+    "touched_lines": 3456,
+    "raw_bytes": 221184,
+    "straddle_waste_bytes": 0
+   },
+   {
+    "traffic_bytes": 24576,
+    "touched_lines": 384,
+    "raw_bytes": 24576,
+    "straddle_waste_bytes": 0
+   }
+  ],
+  "k96_summary": {
+   "raw_bytes": 245760,
+   "aligned_traffic": 245760,
+   "unaligned_traffic": 245760,
+   "baseline_traffic": 147456,
+   "red_base_vs_aligned": 0.6,
+   "red_base_vs_unaligned": 0.6,
+   "align_overhead_vs_unaligned": 1.0
+  }
+ },
+ "lru": {
+  "baseline_dense_oc9216B": {
+   "misses": 36864,
+   "miss_rate": 0.00390625,
+   "dram_weight_traffic_bytes": 2359296
+  },
+  "decomposed_pw_k16_oc64B": {
+   "misses": 256,
+   "miss_rate": 0.00390625,
+   "dram_weight_traffic_bytes": 16384
+  },
+  "decomposed_spatial_k16_oc9216B": {
+   "misses": 36864,
+   "miss_rate": 0.00390625,
+   "dram_weight_traffic_bytes": 2359296
+  },
+  "decomposed_pw_k4_oc16B": {
+   "misses": 256,
+   "miss_rate": 0.00390625,
+   "dram_weight_traffic_bytes": 16384
+  }
+ },
+ "bias_cifar": {
+  "bias_bytes_f32": 40,
+  "bias_bytes_coded": 13,
+  "ratio": 3.076923076923077,
+  "dim": 10,
+  "layer": "ResNet-18/CIFAR-10 fc (512->10)"
+ },
+ "bias_in100": {
+  "bias_bytes_f32": 400,
+  "bias_bytes_coded": 132,
+  "ratio": 3.0303030303030303,
+  "dim": 100,
+  "layer": "ResNet-18/ImageNet-100 fc (512->100)"
+ },
+ "fcq_cifar_fc": {
+  "K": 256,
+  "used_clusters": 229,
+  "coverage": 0.9504,
+  "fp32_bytes": 20480,
+  "index_bytes": 10240,
+  "codebook_bytes": 1482,
+  "quant_bytes": 11722,
+  "bits_per_weight": 18.315625,
+  "compression": 1.747142125917079,
+  "dc_mult": 1.0
+ },
+ "fcq_in100_fc": {
+  "K": 256,
+  "used_clusters": 234,
+  "coverage": 0.9503,
+  "fp32_bytes": 204800,
+  "index_bytes": 102400,
+  "codebook_bytes": 1492,
+  "quant_bytes": 103892,
+  "bits_per_weight": 16.233125,
+  "compression": 1.9712778654756864,
+  "dc_mult": 1.0
+ },
+ "in100_size": {
+  "params": 11223012,
+  "fp32_MB": 44.892048
+ },
+ "seed_compare_cifar": {
+  "K": 256,
+  "dp_mse": 527.3393433373842,
+  "kmeans_mse": 1.7237283514258462e-07
+ },
+ "seed_compare_in100": {
+  "K": 256,
+  "dp_mse": 104213.77834809307,
+  "kmeans_mse": 4.576462880516761e-06
+ },
+ "acc_fc_only": {
+  "fp32_fused_1k": 0.9189,
+  "dp_seed": 0.9189,
+  "kmeans_seed": 0.9189,
+  "K": 256
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "resnet18": {
+    "best_test_acc": 0.9135
+  },
+  "mobilenetv2": {
+    "best_test_acc": 0.808
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "mobilenetv2": {
+    "baseline_flops": 45540352,
+    "tau0.7": {
+      "flops": 44616704,
+      "reduction": 1.0207018429689472,
+      "ks": [
+        7
+      ]
+    },
+    "tau0.8": {
+      "flops": 44858368,
+      "reduction": 1.015203049740909,
+      "ks": [
+        9
+      ]
+    },
+    "tau0.9": {
+      "flops": 45341696,
+      "reduction": 1.0043813094243321,
+      "ks": [
+        13
+      ]
+    }
+  },
+  "fcq_u16": {
+    "acc": 0.8816,
+    "Ks": [
+      256
+    ],
+    "idx_bytes": 10240,
+    "codebook_bytes": 1024,
+    "bits_per_weight": 17.6
+  },
+  "fcq_u8": {
+    "acc": 0.8816,
+    "Ks": [
+      256
+    ],
+    "idx_bytes": 5120,
+    "codebook_bytes": 1024,
+    "bits_per_weight": 9.6
+  },
+  "compression_cost": {
+    "fuse_bn_s": 0.11744589999943855,
+    "decompose_tau0.7_s": 0.9713214000003063,
+    "decompose_tau0.7_peak_mb": 0.412412,
+    "decompose_tau0.8_s": 0.9381108000015956,
+    "decompose_tau0.8_peak_mb": 0.413071,
+    "decompose_tau0.9_s": 0.9824325000008685,
+    "decompose_tau0.9_peak_mb": 0.412498,
+    "fcq_all_linear_s": 1.4482428999981494,
+    "fcq_peak_mb": 31.925112
+  },
+  "krange_resnet18_0.7": {
+    "min": 8,
+    "max": 182,
+    "mean": 82.52941176470588,
+    "n_layers": 17
+  },
+  "krange_resnet18_0.8": {
+    "min": 11,
+    "max": 262,
+    "mean": 115.41176470588235,
+    "n_layers": 17
+  },
+  "krange_resnet18_0.9": {
+    "min": 16,
+    "max": 364,
+    "mean": 158.94117647058823,
+    "n_layers": 17
+  },
+  "footprint_counterexample": {
+    "co8_ci64_k16": {
+      "baseline_bytes": 589824,
+      "decomposed_bytes": 1180160,
+      "ratio": 0.4997830802603037
+    },
+    "co16_ci64_k32": {
+      "baseline_bytes": 1179648,
+      "decomposed_bytes": 2361344,
+      "ratio": 0.49956634865568084
+    },
+    "co32_ci32_k64": {
+      "baseline_bytes": 1179648,
+      "decomposed_bytes": 2367488,
+      "ratio": 0.4982698961937716
+    },
+    "co8_ci128_k16": {
+      "baseline_bytes": 1179648,
+      "decomposed_bytes": 2359808,
+      "ratio": 0.4998915165979605
+    }
+  },
+  "table3_exact": {
+    "256x256_k16": {
+      "baseline_bytes": 75497472,
+      "decomposed_bytes": 4734976,
+      "decomposed_KiB": 4624.0,
+      "reduction": 15.944636678200691
+    },
+    "256x256_k32": {
+      "baseline_bytes": 75497472,
+      "decomposed_bytes": 9469952,
+      "decomposed_KiB": 9248.0,
+      "reduction": 7.972318339100346
+    },
+    "256x256_k64": {
+      "baseline_bytes": 75497472,
+      "decomposed_bytes": 18939904,
+      "decomposed_KiB": 18496.0,
+      "reduction": 3.986159169550173
+    },
+    "256x256_k96": {
+      "baseline_bytes": 75497472,
+      "decomposed_bytes": 28409856,
+      "decomposed_KiB": 27744.0,
+      "reduction": 2.657439446366782
+    },
+    "512x512_k16": {
+      "baseline_bytes": 301989888,
+      "decomposed_bytes": 9469952,
+      "decomposed_KiB": 9248.0,
+      "reduction": 31.889273356401382
+    },
+    "512x512_k32": {
+      "baseline_bytes": 301989888,
+      "decomposed_bytes": 18939904,
+      "decomposed_KiB": 18496.0,
+      "reduction": 15.944636678200691
+    },
+    "512x512_k64": {
+      "baseline_bytes": 301989888,
+      "decomposed_bytes": 37879808,
+      "decomposed_KiB": 36992.0,
+      "reduction": 7.972318339100346
+    },
+    "512x512_k96": {
+      "baseline_bytes": 301989888,
+      "decomposed_bytes": 56819712,
+      "decomposed_KiB": 55488.0,
+      "reduction": 5.314878892733564
+    }
+  }
+}

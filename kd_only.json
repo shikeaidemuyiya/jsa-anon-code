@@ -1,0 +1,5 @@
+{
+ "kd_only_baseline_acc": 0.9135,
+ "kd_only_acc": 0.913,
+ "gain_pp": -0.04999999999999449
+}
